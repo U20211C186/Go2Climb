@@ -1,0 +1,37 @@
+
+.toolbar{
+  background-color: #5D97A8;
+  flex: auto;
+}
+
+.account{
+  font-family:'Segoe UI light' ;
+  color: whitesmoke;
+  margin-left: 15px;
+}
+
+.services{
+  font-family:'Segoe UI light' ;
+  color: whitesmoke;
+  margin-left: 15px;
+}
+
+.hello{
+  font-family:'Segoe UI light' ;
+  color: whitesmoke;
+  margin-left: 15px;
+}
+
+.log{
+  font-family:'Segoe UI light' ;
+  color: whitesmoke;
+  margin-left: 15px;
+}
+
+a.log:hover, a.services:hover, a.account:hover{
+  font-weight: bold;
+}
+
+.mat-spacer {
+  flex: 1 1 auto;
+}

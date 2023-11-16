@@ -1,0 +1,63 @@
+<div class="content-log" style="display: flex; justify-content: center">
+  <div class="second-content">
+
+    <div class="image-section">
+      <img src="/assets/logo.png" alt="Your Image" style="width: 200px; height: auto;">
+    </div>
+    <div class="log-content">
+      <mat-tab-group>
+
+        <div class="content-login">
+          <mat-tab label="Login">
+            <div class="login-section">
+              <div class="login-card">
+                <h2 class="login-card__title">Complete your information</h2>
+                <form class="login-form" [formGroup]="loginform" (ngSubmit)="proceedlogin()">
+                  <mat-form-field class="login-form-field">
+                    <mat-label>Username</mat-label>
+                    <input matInput formControlName="email" />
+                  </mat-form-field>
+                  <mat-form-field class="login-form-field">
+                    <mat-label>Password</mat-label>
+                    <input matInput type="password" formControlName="password" />
+                  </mat-form-field>
+                  <div class="login-form__actions">
+                    <button mat-raised-button >Sign In</button>
+                    <a [routerLink]="'/forgot-password'" class="forgot-password-link">Forgot password?</a>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </mat-tab>
+        </div>
+
+        <div class="content-signup">
+          <mat-tab label="Register">
+            <div class="register-card">
+              <h3 class="register-card__title">Select the option</h3>
+              <div class="register-card__content">
+                <div class="content-dropdown">
+                  <mat-form-field appearance="fill">
+                    <mat-label>Select an option</mat-label>
+                    <mat-select [(ngModel)]="typeSelect" name="options">
+                      <mat-option *ngFor="let type of types" [value]="type">{{type}}</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </div>
+                <div class="content-button">
+                  <button mat-raised-button color="accent" (click)="placeRegister()">Don't have an account? Sign Up</button>
+                </div>
+
+              </div>
+            </div>
+          </mat-tab>
+        </div>
+
+      </mat-tab-group>
+    </div>
+
+  </div>
+</div>
+
+
+

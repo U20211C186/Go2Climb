@@ -1,0 +1,135 @@
+<app-header></app-header>
+<section>
+  <header>
+    <h2>{{ currentService?.name }}</h2>
+
+    <div>
+      <button mat-raised-button (click)="handleGoToEdit()">Edit</button>
+      <button mat-raised-button color="warn" (click)="handleDeleteService()">
+        Delete
+      </button>
+    </div>
+  </header>
+
+  <div class="container card">
+    <div class="pictures">
+      <div>
+        <img [src]="currentService?.img_url || defaultImage" alt="service" />
+      </div>
+
+      <div class="collage">
+        <img src="../../assets/river.png" alt="river" />
+        <img src="../../assets/downfall.png" alt="downfall" />
+        <img src="../../assets/boat.png" alt="boat" />
+        <img src="../../assets/camp.png" alt="camp" />
+      </div>
+    </div>
+
+    <div class="details">
+      <div class="profile">
+        <img [src]="currentService?.agency_img" alt="agency_logo" />
+
+        <div class="name">
+          <strong>By: {{ currentService?.agency_name }}</strong>
+        </div>
+      </div>
+
+      <div class="score">
+        Puntaje:
+        <mat-icon class="star" (click)="actualizarPuntaje(1)">star</mat-icon>
+        <mat-icon class="star" (click)="actualizarPuntaje(2)">star</mat-icon>
+        <mat-icon class="star" (click)="actualizarPuntaje(3)">star</mat-icon>
+        <mat-icon class="star" (click)="actualizarPuntaje(4)">star</mat-icon>
+        <mat-icon class="star" (click)="actualizarPuntaje(5)">star</mat-icon>
+    </div>
+    
+      <p>Price: S/. {{ currentService?.price }}</p>
+
+      <p>Location: {{ currentService?.location }}</p>
+    </div>
+
+    <div class="information">
+      <div class="service">
+        <div class="description">
+          <h3>Description:</h3>
+
+          <div class="card">
+            <p>{{ currentService?.description }}</p>
+          </div>
+        </div>
+
+        <div class="itinerary">
+          <h3>Reviews:</h3>
+
+          <div class="card">
+            <p>
+              Maria: "¡El alpinismo es una experiencia emocionante! Disfruté cada minuto de la actividad 1. Los paisajes eran impresionantes, y el guía fue muy profesional."
+            </p>
+
+            <p>
+              Juan: "Activity 2 me dejó sin aliento, literalmente. La adrenalina de escalar es incomparable. ¡Lo recomiendo a cualquiera que busque emociones fuertes!"
+            </p>
+
+            <p>
+              Laura: "El alpinismo siempre ha sido mi pasión, y Activity 3 superó mis expectativas. La ubicación era hermosa, y el equipo proporcionado era de alta calidad. ¡Una aventura inolvidable!"
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="reviews">
+        <h3>Itinerary:</h3>
+
+        <div class="card">
+          <p>
+            Servicio de Alpinismo en Montaña Aventura Extrema
+
+            Día 1: Llegada y Bienvenida
+            
+            9:00 AM: Llegada al campamento base en la Montaña Aventura Extrema.
+            10:00 AM: Registro y bienvenida por parte del equipo de guías.
+            12:00 PM: Almuerzo en el campamento base.
+            3:00 PM: Primera caminata de aclimatación para familiarizarse con la zona.
+            7:00 PM: Cena y briefing sobre el itinerario y las medidas de seguridad.
+            Día 2: Ascenso a Campamento Alto
+            
+            6:00 AM: Desayuno temprano.
+            7:00 AM: Comienza el ascenso al Campamento Alto.
+            12:00 PM: Almuerzo en Campamento Intermedio.
+            3:00 PM: Llegada al Campamento Alto.
+            7:00 PM: Cena y preparación para el ascenso a la cumbre.
+            Día 3: Cumbre y Descenso
+            
+            4:00 AM: Despertar temprano y desayuno ligero.
+            5:00 AM: Comienza el ascenso a la cumbre.
+            9:00 AM: Llegada a la cumbre y tiempo para disfrutar de las vistas panorámicas.
+            11:00 AM: Comienza el descenso hacia el Campamento Alto.
+            3:00 PM: Llegada al Campamento Alto y descanso.
+            7:00 PM: Cena y celebración del logro.
+            Día 4: Regreso al Campamento Base
+            
+            6:00 AM: Desayuno temprano.
+            7:00 AM: Comienza el descenso hacia el Campamento Base.
+            12:00 PM: Almuerzo en Campamento Intermedio.
+            3:00 PM: Llegada al Campamento Base y tiempo para relajarse.
+            7:00 PM: Cena de despedida y entrega de certificados.
+            Día 5: Despedida y Regreso
+            
+            9:00 AM: Desayuno y tiempo libre para explorar la zona.
+            12:00 PM: Check-out y despedida del equipo de guías.
+            1:00 PM: Regreso a la ciudad base.  
+          </p>
+          <div class="client" *ngFor="let review of reviews">
+            <img class="client-img" [src]="review.tourist.photo" alt="client" />
+
+            <div>
+              <h4>{{ review.tourist.name }} {{ review.tourist.lastName }}</h4>
+
+              {{ review.comment }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

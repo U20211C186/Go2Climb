@@ -1,0 +1,186 @@
+{
+  "services": [
+    {
+      "id": 1,
+      "name": "Prueba 1",
+      "price": 200,
+      "location": "Huascaran",
+      "img_url": "https://wwwnc.cdc.gov/travel/images/mountain-biker.jpg",
+      "description": "Lorem ipsum dolor",
+      "isOffer": false,
+      "priceOffer": 0,
+      "agency_id": 1,
+      "status": "Pending",
+      "score": 3
+    },
+    {
+      "id": 2,
+      "name": "Prueba 2",
+      "price": 250,
+      "location": "Cuzco",
+      "img_url": "https://www.exoticca.com/es/blog/wp-content/uploads/2019/10/No-sabes-qu%C3%A9-ver-en-Cuzco_Nosotros-te-guiamos.jpg",
+      "description": "Lorem ipsum dolor",
+      "isOffer": false,
+      "priceOffer": 0,
+      "agency_id": 1,
+      "status": "Pending",
+      "score": 3
+    },
+    {
+      "id": 3,
+      "name": "Prueba 3",
+      "price": 300,
+      "location": "Alpamayo",
+      "img_url": "https://andeanrajuexpeditions.com/wp-content/uploads/2021/05/Alpamayo-la-montana-mas-hermosa.jpg",
+      "description": "Lorem ipsum dolor",
+      "isOffer": true,
+      "priceOffer": 0,
+      "agency_id": 1,
+      "status": "Pending",
+      "score": 4
+    },
+    {
+      "id": 4,
+      "name": "Prueba 4",
+      "price": 500,
+      "location": "Hatun Machay",
+      "img_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Bosque_de_Piedras_de_Hatun_Machay.jpg/1200px-Bosque_de_Piedras_de_Hatun_Machay.jpg",
+      "description": "Lorem ipsum dolor",
+      "isOffer": false,
+      "priceOffer": 0,
+      "agency_id": 2,
+      "status": "Pending",
+      "score": 4
+    },
+    {
+      "id": 5,
+      "name": "Aventura",
+      "price": 500,
+      "location": "prueba",
+      "img_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Bosque_de_Piedras_de_Hatun_Machay.jpg/1200px-Bosque_de_Piedras_de_Hatun_Machay.jpg",
+      "description": "Lorem ipsum dolor",
+      "isOffer": false,
+      "priceOffer": 0,
+      "agency_id": 2,
+      "status": "Pending",
+      "score": 4
+    },
+    {
+      "name": "Jijijija",
+      "description": "jijijija",
+      "price": "420",
+      "location": "jijijija",
+      "img_url": "https://media.timeout.com/images/105894037/750/422/image.jpg",
+      "id": 6
+    },
+    {
+      "name": "prueba clase",
+      "description": "aaaaaa",
+      "price": "500",
+      "location": "Huascaran",
+      "img_url": "https://e00-marca.uecdn.es/blogs/una-vida-al-filo/imagenes_posts/2018/07/07/194521_696x465.jpg",
+      "id": 7
+    },
+    {
+      "name": "Prueba 1",
+      "description": "Lorem ipsum dolor",
+      "price": 200,
+      "location": "Huascaran",
+      "img_url": "https://wwwnc.cdc.gov/travel/images/mountain-biker.jpg",
+      "id": 8
+    },
+    {
+      "name": "Jijijija",
+      "description": "jijijija",
+      "price": "420",
+      "location": "jijijija",
+      "img_url": "https://media.timeout.com/images/105894037/750/422/image.jpg",
+      "id": 9
+    },
+    {
+      "name": "Jijijija",
+      "description": "jijijija",
+      "price": "420",
+      "location": "jijijija",
+      "img_url": "https://media.timeout.com/images/105894037/750/422/image.jpg",
+      "id": 10
+    }
+  ],
+  "agencies": [
+    {
+      "score": 0,
+      "id": 1,
+      "name": "Tourist extreme",
+      "email": "data@hotmail.com",
+      "description": "agencia 1",
+      "location": "Lima",
+      "password": "jijijija",
+      "ruc": "3432424",
+      "phoneNumber": "312321321",
+      "img_url": "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/travel-agency-logo%2C-travel-company-logo-%281%29-design-template-bc9dcb1ca0e92d6394dea26418a87c8e_screen.jpg",
+      "type_user": "agency"
+    },
+    {
+      "score": 0,
+      "id": 2,
+      "name": "Prueba agencia",
+      "email": "agencia@hotmail.com",
+      "description": "agencia prueba",
+      "location": "Lima",
+      "password": "jijijija",
+      "ruc": "3432424",
+      "phoneNumber": "312321321",
+      "img_url": "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/travel-agency-logo%2C-travel-company-logo-%281%29-design-template-bc9dcb1ca0e92d6394dea26418a87c8e_screen.jpg",
+      "type_user": "agency"
+    }
+  ],
+  "user": [
+    {
+      "email": "julian@gmail.com",
+      "password": "qwertyuio",
+      "agencyName": "Julian",
+      "phone": "987654321",
+      "location": "Peru",
+      "ruc": "65465",
+      "id": 1
+    },
+    {
+      "email": "fiorella@gmail.com",
+      "password": "qwertyuio",
+      "name": "fiorella",
+      "phone": "987654321",
+      "location": "Lima",
+      "userType": "tourist",
+      "id": 2
+    },
+    {
+      "email": "juan@gmail.com",
+      "password": "qwertyuio",
+      "agencyName": "juan",
+      "phone": "987654321",
+      "location": "Lima",
+      "ruc": "135165",
+      "userType": "agency",
+      "id": 3
+    },
+    {
+      "email": "turista@gmail.com",
+      "password": "12345678",
+      "name": "prueba turista",
+      "phone": "111111111",
+      "location": "Lima",
+      "userType": "tourist",
+      "id": 4
+    },
+    {
+      "email": "zoneturist1@gmail.com",
+      "password": "qwertyuio",
+      "agencyName": "ZoneTurist1",
+      "phone": "968532145",
+      "location": "Arequipa",
+      "ruc": "1487513",
+      "userType": "agency",
+      "id": 5
+    }
+  ]
+}

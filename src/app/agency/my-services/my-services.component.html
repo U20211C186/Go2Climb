@@ -1,0 +1,41 @@
+<app-header></app-header>
+<div class="header" style="display: flex; justify-content: space-between">
+  <div style="padding-left: 5%">
+    <h1 style="font-weight: bold; color: #356f80">My Services</h1>
+  </div>
+</div>
+<div style="padding-left: 5%" *ngIf="services.length == 0">
+  <h1 style="font-weight: bold; color: #356f80">No Tienes Servicios</h1>
+</div>
+<mat-grid-list cols="3" rowHeight="390px">
+  <mat-grid-tile *ngFor="let service of services" style="display: flex">
+    <mat-card class="service-card" (click)="serviceDetail(service.id)">
+      <img
+        mat-card-image
+        src="{{ service.photos }}"
+        class="card-img"
+        alt="Photo of a Shiba Inu"
+      />
+      <mat-card-content>
+        <mat-card-title>{{ service.name }}</mat-card-title>
+        <mat-card-subtitle style="display: flex; justify-content: center">{{
+          service.location
+          }}</mat-card-subtitle>
+        <p style="display: flex; justify-content: center">
+          {{ service.price + "$" }}
+        </p>
+        <h1 style="display: flex; justify-content: center">
+          {{ service.score }} <mat-icon class="star">grade</mat-icon>
+        </h1>
+      </mat-card-content>
+    </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>
+
+<div *ngIf="userType == 'agency'" style="display: flex; justify-content: end">
+  <div style="margin-right: 5%" id="btn">
+    <button mat-fab extended (click)="handleGoToAddService()" class="add-btn">
+      <mat-icon>add</mat-icon>Add
+    </button>
+  </div>
+</div>

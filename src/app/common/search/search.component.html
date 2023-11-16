@@ -1,0 +1,84 @@
+<app-header></app-header>
+<div class="header" style="display: flex; justify-content: space-between;">
+  <div style="padding-left: 5%; padding-top: 1%;">
+    <h1 style="font-weight: bold; color: #356F80;">Results</h1>
+  </div>
+</div>
+<mat-drawer-container class="example-container">
+  <mat-drawer mode="side" opened>
+    <div>
+      <mat-card class="example-card">
+        <mat-card-header>
+          <mat-card-title>Filters </mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <h3>Price Range</h3>
+          <mat-slider
+          [max]="max"
+          [min]="min"
+          [step]="1"
+          >
+            <input matSliderStartThumb [(ngModel)]="minPrice">
+            <input matSliderEndThumb [(ngModel)]="maxPrice">
+          </mat-slider>
+
+          <div style="display: flex; justify-content: space-around;">
+            <p style="font-weight: bold;"> min: $ {{minPrice}} </p>
+            <p style="font-weight: bold;">max: $ {{maxPrice}} </p>
+          </div>
+
+          <h3>Min Rating</h3>
+
+          <mat-slider
+          [max]=5
+          [min]=0
+          [step]="0.5"
+          >
+            <input matSliderThumb [(ngModel)]="rating">
+          </mat-slider>
+          <div style="display: flex; justify-content: center;">
+            <p style="font-weight: bold;"> {{rating}} <mat-icon class="star">grade</mat-icon></p>
+          </div>
+
+          <div style="display: flex; justify-content: space-between;">
+            <button mat-button style="background-color: #5D97A8; color: azure;" (click)="filterResults()">filter</button>
+            <button mat-button style="background-color: #5D97A8; color: azure;" (click)="clear()">clear</button>
+            </div>
+        </mat-card-content>
+
+
+
+      </mat-card>
+    </div>
+  </mat-drawer>
+  <mat-drawer-content style="background-color: azure; padding-left: 10px;">
+    <mat-card class="result-container" *ngFor="let result of filtered">
+        <mat-card-content>
+          <div style="display: flex; padding-top: 10px; padding-bottom: 10px;">
+            <img mat-card-sm-image src="{{result.photos}}" class="card-img">
+            <div  style="margin-left: 25px;">
+              <mat-card-title>{{result.name}}</mat-card-title>
+              <div style="display:flex; padding-top: 10px;">
+                <mat-card-subtitle style="padding-right: 50px;">Offered by: {{result.agency_id}} </mat-card-subtitle>
+                <mat-card-subtitle style="padding-right: 50px;">Location: {{result.location}}</mat-card-subtitle>
+                <mat-card-subtitle>Price: {{result.price}}</mat-card-subtitle>
+              </div>
+              <div>
+                <mat-card-subtitle>score: {{result.score}}<mat-icon class="star">grade</mat-icon></mat-card-subtitle>
+              </div>
+            </div>
+          </div>
+
+        </mat-card-content>
+    </mat-card>
+    <mat-card *ngIf="filtered.length == 0" class="no-result">
+      <div style="display: flex; justify-content: center;">
+        <h1 style="color: #356F80; font-weight: bold;">No matches found</h1>
+      </div>
+      <div style="display: flex; justify-content: center;">
+        <img src="https://cdn2.iconfinder.com/data/icons/cloud-computing-70/48/cloud-computing-serveless-search-fail-512.png" class="fail-img">
+      </div>
+    </mat-card>
+  </mat-drawer-content>
+</mat-drawer-container>
+

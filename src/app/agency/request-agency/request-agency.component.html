@@ -1,0 +1,57 @@
+<app-header></app-header>
+
+<div class="header" style="display: flex; justify-content: space-between">
+  <div style="padding-left: 5%">
+    <h1 style="font-weight: bold; color: #356f80">Your Requested Services</h1>
+  </div>
+</div>
+<div style="padding-left: 5%" *ngIf="filtered.length == 0">
+  <h1 style="font-weight: bold; color: #356f80">No Tienes Pedidos</h1>
+</div>
+<mat-grid-list cols="1" rowHeight="180px">
+  <mat-grid-tile *ngFor="let service of filtered" style="display: flex">
+    <mat-card class="service-card">
+      <mat-card-content class="service-card-content">
+        <img
+          mat-card-image
+          src="{{ service.service.photos }}"
+          class="card-img"
+          alt="Photo of a Shiba Inu"
+        />
+        <div style="margin-left: 15px;">
+          <mat-card-title>Name: {{ service.service.name }}</mat-card-title>
+        </div>
+        <div style="margin-left: 15px; margin-top: 12px">
+          <p style="display: flex; justify-content: center">Location: {{service.service.location}}</p>
+        </div>
+        <div style="margin-left: 15px; margin-top: 12px">
+          <p style="display: flex; justify-content: center">Price: {{ service.price + "$" }}</p>
+        </div>
+        <div style="margin-left: 15px; margin-top: 12px">
+          <p style="display: flex; justify-content: center">Amount: {{ service.amount }}</p>
+        </div>
+        <div style="margin-left: 15px; margin-top: 12px">
+          <p style="display: flex; justify-content: center">Requested By: {{ service.tourist.name }}</p>
+        </div>
+        <div style="margin-left: 15px; margin-top: 12px">
+          <p style="display: flex; justify-content: center">Status: {{ service.status }}</p>
+        </div>
+        <!--div style="margin-left: 15px; margin-top: 12px">
+          <mat-drawer-container style="background-color: transparent">
+            <mat-drawer #drawer [mode]="mode.value"></mat-drawer>
+            <mat-drawer-content>
+              <mat-form-field>
+                <mat-label>Select Options</mat-label>
+                <mat-select #mode value="{{service.status}}">
+                  <mat-option value="Pending">Pending</mat-option>
+                  <mat-option value="Complete">Complete</mat-option>
+                  <mat-option value="Canceled">Canceled</mat-option>
+                </mat-select>
+              </mat-form-field>
+            </mat-drawer-content>
+          </mat-drawer-container>
+        </div-->
+      </mat-card-content>
+    </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>

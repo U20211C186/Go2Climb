@@ -1,0 +1,38 @@
+.example-container {
+  width: auto;
+  height: 77%;
+  margin: 10px;
+ }
+
+.example-card {
+  margin: 10px;
+  width: 350px;
+}
+
+
+mat-slider {
+  width: 300px;
+}
+
+.star{
+  color: goldenrod;
+}
+
+.result-container{
+  width:100%;
+  border: 1px solid #356f805b;
+  margin-top: 5px;
+}
+
+.card-img{
+  width: 200px;
+  height: 150px;
+}
+
+.no-results{
+  width: 100%;
+}
+
+.fail-img{
+  width: 300px;
+}

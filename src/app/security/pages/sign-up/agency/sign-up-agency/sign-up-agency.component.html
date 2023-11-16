@@ -1,0 +1,60 @@
+<div style="display: flex; justify-content: center">
+  <mat-card class="register-form">
+    <mat-card-header>
+      <h2 style="color: white">Create your agency account</h2>
+    </mat-card-header>
+    <mat-card-content>
+      <form [formGroup]="signUpAgencyForm">
+        <mat-form-field class="mat-form-field">
+          <mat-label>Agency name:</mat-label>
+          <input matInput placeholder="agencyName" formControlName="name" required />
+          <mat-error *ngIf="name.errors?.['required']">
+            Name is required
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field class="mat-form-field">
+          <mat-label>E-mail:</mat-label>
+          <input matInput placeholder="user@domain.com" formControlName="email" required />
+          <mat-error *ngIf="email.errors?.['required']">
+            Email is required
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field class="mat-form-field">
+          <mat-label>Mobile number:</mat-label>
+          <input matInput placeholder="phone" input type="number" formControlName="phoneNumber" required />
+          <mat-error *ngIf="phoneNumber.errors?.['required']">
+            Mobile number is required
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field class="mat-form-field">
+          <mat-label>Location:</mat-label>
+          <input matInput placeholder="location" formControlName="location" required />
+          <mat-error *ngIf="location.errors?.['required']">
+            Location is required
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field class="mat-form-field">
+          <mat-label>RUC:</mat-label>
+          <input matInput placeholder="ruc" input type="number" formControlName="ruc" required />
+          <mat-error *ngIf="ruc.errors?.['required']">
+            Location is required
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field class="mat-form-field">
+          <mat-label>Password:</mat-label>
+          <input type="password" matInput placeholder="password" formControlName="password" required />
+          <mat-error *ngIf="password.errors?.['password']">
+            Password must be at least 8 characters length!!!.
+          </mat-error>
+          <mat-error *ngIf="password.errors?.['required']">
+            Password is required
+          </mat-error>
+        </mat-form-field>
+        <div>
+          <button mat-raised-button class="material-button" routerLink="/sign-in" (click)="cancelSignUp()">Cancel</button>
+          <button mat-raised-button class="material-button" (click)="proceedregister()">Sign-Up</button>
+        </div>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>

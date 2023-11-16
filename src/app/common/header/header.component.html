@@ -1,0 +1,13 @@
+<mat-toolbar class="toolbar">
+  <span><img class="logo" src="../../assets/logo.png"></span>
+  <a *ngIf="userType == 'tourist'" mat-button class="account" [routerLink]="'/account'">Account</a>
+  <a *ngIf="userType == 'agency'" mat-button class="account" [routerLink]="'/account-agency'">Account</a>
+  <a mat-button class="services" [routerLink]="'/home'">Home</a>
+  <a *ngIf="userType == 'agency'" mat-button class="services" [routerLink]="'/my-services'">My Services</a>
+  <a *ngIf="userType == 'agency'" mat-button class="services" [routerLink]="'/request'">Requests</a>
+  <div class="mat-spacer"></div>
+  <a class="hello">Hello User</a>
+  <a mat-button class="log" routerLink="/sign-in">Log out</a>
+
+</mat-toolbar>
+

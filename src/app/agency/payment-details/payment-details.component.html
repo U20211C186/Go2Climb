@@ -1,0 +1,45 @@
+<app-header></app-header>
+<div class="payment-container">
+  <div class="payment-card-container">
+    <mat-card class="payment-card">
+      <!-- Header -->
+      <div class="content-header">
+        <mat-card-header>
+          <mat-card-title>Payment Details</mat-card-title>
+        </mat-card-header>
+      </div>
+      <!-- Formulario de Payment Details -->
+      <div class="content-payment-form">
+        <mat-card-content>
+          <form class="payment-form">
+            <!-- Campos de la tarjeta -->
+            <div class="form-group">
+              <div class="form-group">
+                <label for="card-holder">Card Holder Name</label>
+                <input type="text" id="card-holder" placeholder="Enter card holder name" required>
+              </div>
+              <!--(ngModel) connect the input to cardNumber, when the value changes, this (ngModelChange) calls to formatCargNumer-->
+              <label for="card-number">Card Number</label>
+              <input type="text" id="card-number" placeholder="Enter card number" maxlength="16" [(ngModel)]="cardNumber" required>
+              <small>Please enter a valid 16-digit card number</small>
+            </div>
+            <div class="form-group">
+              <label for="expiry-date">Expiry Date</label>
+              <input type="text" id="expiry-date" placeholder="MM/YY" required>
+            </div>
+            <div class="form-group">
+              <label for="cvv">CVV</label>
+              <input type="text" id="cvv" placeholder="Enter CVV" required>
+            </div>
+
+          </form>
+        </mat-card-content>
+      </div>
+      <!-- Actions Buttons -->
+      <mat-card-actions>
+        <button mat-raised-button class="custom-button" (click)="redirectToAccount()">Upgrade now</button>
+        <button mat-raised-button (click)="redirectToPlans()">Cancel</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>

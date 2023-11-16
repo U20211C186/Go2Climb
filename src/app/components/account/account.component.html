@@ -1,0 +1,44 @@
+<app-header></app-header>
+<main class="container">
+  <h2 class="title">Account</h2>
+
+  <section class="avatar__wrapper">
+    <div class="avatar">
+      <img class="avatar__image" [src]="imgUrl" alt="user avatar" />
+    </div>
+
+    <div class="avatar__configuration">
+      <form
+        class="configuration__form"
+        [formGroup]="touristData"
+        (ngSubmit)="updateTourist()"
+      >
+        <mat-form-field class="example-full-width">
+          <mat-label>Name</mat-label>
+          <input matInput formControlName="name" />
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <mat-label>E-mail</mat-label>
+          <input matInput formControlName="email" />
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <mat-label>Phone</mat-label>
+          <input matInput formControlName="phone" />
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <mat-label>Location</mat-label>
+          <input matInput formControlName="location" />
+        </mat-form-field>
+
+        <div class="actions">
+          <!-- <button mat-flat-button color="primary">Change password</button> -->
+
+          <button mat-flat-button color="primary">Update</button>
+        </div>
+      </form>
+    </div>
+  </section>
+</main>

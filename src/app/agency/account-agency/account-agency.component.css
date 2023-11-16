@@ -1,0 +1,35 @@
+.container {
+  max-width: 1000px;
+  margin: 35px auto 0;
+}
+
+.title {
+  color: #356f80;
+  font-weight: 600;
+  font-size: 36px;
+  margin-bottom: 35px;
+}
+
+.avatar__wrapper {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 10rem;
+  margin: 0 6rem;
+}
+
+.avatar__image {
+  width: 150px;
+}
+
+.configuration__form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.actions {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+}
+

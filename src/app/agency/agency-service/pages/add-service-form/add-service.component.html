@@ -1,0 +1,60 @@
+<app-header></app-header>
+<main class="container">
+  <h2 class="title">Add service</h2>
+
+  <section class="avatar__wrapper">
+    <div class="avatar">
+      <img class="avatar__image" [src]="img_url" alt="user avatar" />
+
+      <mat-form-field class="example-full-width">
+        <mat-label>URL de la imagen</mat-label>
+        <input matInput placeholder="URL" [formControl]="imageURLInput" />
+      </mat-form-field>
+
+      <button mat-flat-button color="primary" (click)="handleUploadPhoto()">
+        Upload photo
+      </button>
+    </div>
+
+    <div class="avatar__configuration">
+      <form
+        class="configuration__form"
+        [formGroup]="serviceForm"
+        
+      >
+        <mat-form-field class="example-full-width">
+          <mat-label>Title</mat-label>
+          <input matInput formControlName="name" />
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <mat-label>Description</mat-label>
+          <input matInput formControlName="description" />
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <mat-label>Price</mat-label>
+          <input matInput formControlName="price" />
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <mat-label>Place</mat-label>
+          <input matInput formControlName="location" />
+        </mat-form-field>
+
+        <!-- <mat-form-field class="example-full-width">
+          <mat-label>Date</mat-label>
+          <input matInput formControlName="date" [matDatepicker]="picker" />
+          <mat-datepicker-toggle matIconSuffix [for]="picker" />
+          <mat-datepicker #picker />
+        </mat-form-field> -->
+        <div class="actions">
+          <button (click)="updateService()">Actualizar Servicio</button>
+        </div>
+        <div class="actions">
+          <button (click)="addService()">Agregar Servicio</button>
+        </div>
+      </form>
+    </div>
+  </section>
+</main>

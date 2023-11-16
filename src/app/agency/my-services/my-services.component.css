@@ -1,0 +1,45 @@
+.service-card {
+  max-width: 400px;
+  min-width: 300px;
+  height: 400px;
+  margin-bottom: 55px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #356F80;
+  cursor: pointer;
+
+}
+.card-img{
+  width: 350px;
+  object-fit: contain;
+  padding: 15px;
+
+}
+
+.header{
+  margin-top: 15px;
+}
+
+
+.search-field{
+  width: 550px;
+}
+
+.add-btn{
+  background-color: #356F80;
+}
+
+#btn{
+  position: fixed;
+  bottom: 110px;
+  right: 10px;
+}
+
+.mat-buttonSuccess{
+  color: #356F80;
+}
+
+.star{
+  color: goldenrod;
+  margin-top: 2px;
+}

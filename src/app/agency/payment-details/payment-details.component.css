@@ -1,0 +1,65 @@
+.payment-container{
+  min-height: calc(100vh - 120px); /*Just for the footer*/
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: white;
+}
+.payment-card-container{
+  display: flex;
+  justify-content: center;
+  height: auto ;
+}
+.payment-card {
+  display: flex;
+  width: 700px;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: #5D97A8;
+}
+.content-header{
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+  padding-bottom: 20px;
+
+}
+.content-header mat-card-title{
+  color: white;
+  font-size: 30px;
+}
+
+.payment-form {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 10px;
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+label {
+  color: white;
+  font-weight: lighter;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+mat-card-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.custom-button {
+  background-color: #18A89F !important;
+  color: white !important;
+}
+
